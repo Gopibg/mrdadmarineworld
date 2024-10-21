@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Dad Marine World</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+      }
+    #navbar{
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        padding:10px 10px;
+        box-shadow: 3px 3px 10px rgb(105, 172, 211);
+        background: rgb(53, 164, 228);
+    }
+    .navbar .navbar-brand{
+        font-size: 30px;
+        font-weight:;
+        color: #f86103 !important;
+    }
+    #navbarSupportedContent{
+        color: white;
+        border-bottom: 2px solid transparent;
+    }
+    #navbarSupportedContent a:hover{
+        border-bottom: 2px solid  #f86103;
+    }
+    #navbarSupportedContent button{
+        color: #f86103;
+        width: 5rem;
+        border-radius: 20px;
+        font-weight: 800;
+    }
+    .carousel img{
+        width:100%;
+        height:400px;
+        background-position: center;
+        background-size: cover;
+    }
+    #about{
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient( to right,rgb(13, 201, 226), rgb(46, 66, 66));
+      
+    }
+    #about img{
+      padding-top: 200px;
+      margin-left:20px;
+      width: 400px;
+      height: 400px;
+      
+    }
+    #about h1{
+      color:white;
+      font-size: xx-large;
+      font-weight: 800;
+      font-family:url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    }
+    #about p{
+      color: rgb(255, 255, 255);
+      padding-top:0px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #product{
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      height: 100vh;
+    }
+    #products img{
+      width: 150px;
+      height: 150px;
+    }
+    #Products h1{
+      font-size: 40px;
+      letter-spacing: 3px;
+      font-weight: 800;
+    }
+    .card{
+      margin: 20px auto;
+      align-items: center;
+      justify-content: center;
+      width: 250px;
+      height: 300px;
+      border: none !important;
+      box-shadow: 15px 25px 20px rgba(0,0,0,3),
+                   inset 4px 4px 10px rgb(199, 197, 197);
+      border-radius: 15px !important;
+      overflow: hidden; 
+                  
+    }
+    .card:hover{
+      box-shadow: inset 5px 5px 10px rgba(0,0,0,3),
+                   inset -4px -4px 10px rgb(255, 255, 255);
+      transition: .2s;
+    }
+    #contact{
+      width: 100%;
+      height: 100vh;
+      padding-top: 100px;
+    }
+    #contact img{
+      height: 100%;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+    }
+    #contact input{
+      margin: 10px 0px;
+    }
+    #contact textarea{
+      margin: 10px 0px;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+        <div class="container-fluid">
+        <img src="logo.png" width="70px" height="70px">
+          <a class="navbar-brand" href="#">MrDad Marine World</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto"(end)>
+              <li class="nav-item">
+                <a class="nav-link"href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"href="#products">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"href="#contact">Contact</a>
+              </li>
+            </ul>
+            <button class="btn p-2 my-0 my-2">Sign In</button>
+        </div>
+      </nav>
+
+      <section id="home">
+        <nav class="carousel">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="bg1.jpg" class="d-block w-100" alt="...">
+                </div>
+              <div class="carousel-item">
+                  <img src="bg2.jpg" class="d-block w-100" alt="...">
+              </div>
+                <div class="carousel-item">
+                  <img src="bg3.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </nav>
+      </section>
+
+      <section id="about">
+         <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-6 col-md-6 col-12 my-2" >
+                   <img src="about.jpg" class="img-fluid">
+              </div>
+              <div class="col-lg-6 col-md-6 col-12 p-lg-5 p-2 my-5">
+                  <h1>ABOUT US</h1>
+                  <p>A marine aquarium is an aquarium that keeps marine plants and animals in a contained environment. Marine aquaria are further subdivided by hobbyists into fish only (FO), fish only with live rock (FOWLR), and reef aquaria. Fish only tanks often showcase large or aggressive marine fish species and generally rely on mechanical and chemical filtration. FOWLR and reef tanks use live rock, a material composed of coral skeletons harboring beneficial nitrogen waste metabolizing bacteria, as a means of more natural biological filtration.
+
+                    Marine fishkeeping is different from its freshwater counterpart because of the fundamental differences in the constitution of saltwater and the resulting differences in the adaptation of its inhabitants. A stable marine aquarium requires more equipment than freshwater systems, and generally requires more stringent water quality monitoring.[1] The inhabitants of a marine aquarium are often difficult to acquire and are usually more expensive than freshwater aquarium inhabitants.</p>
+              </div>
+          </div>
+         </div>
+      </section>
+
+      <section id="products">
+        <div class="container-fluid">
+          <h1 class="text-center my-5">OUR PRODUCTS</h1>
+          <div class="row">
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://images.squarespace-cdn.com/content/v1/60bfe8a9bed1f6542ff50796/dce60abc-7925-444f-8593-167ad95b6998/clownfish-or-anemonefish-2021-08-28-22-10-47-utc.jpg" class="card-img-top">
+              <div class="card-body text-center">
+                <h5 class="card-title">Clownfish</h5>
+                <h4 class="card-title text-center">1500.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Pomacanthus_paru3.jpg" class="card-img-top">
+              <div class="card-body text-center">
+                <h5 class="card-title">Angelfishe</h5>
+                <h4 class="card-title text-center">500.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS2CGP_7ADMnPgioNXROYfA3s63rQDiNu32M9IK0RfrF_EbRSD-" class="card-img-top">
+              <div class="card-body text-center">
+                <h5 class="card-title">Diamond watchman goby</h5>
+                <h4 class="card-title text-center">800.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyrzpchfWjbT_EvsUQSmOGF8LBojLCkxNf3xvjJJwPM6iscZJJ" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title  text-center">Blue-green chromi</h5>
+                <h4 class="card-title text-center">200.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://www.liveaquaria.com/images/categories/large/lg_71133_Firefish.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Firefish</h5>
+                <h4 class="card-title text-center">500.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSkL97ymIgjbbs_KKlW97XibXTAVMz01ItH1oE5xmFE2hkDdnfj" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Butterflyfish</h5>
+                <h4 class="card-title text-center">800.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://www.liveaquaria.com/images/categories/large/lg_70444_Yellowtail_Damselfish.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Yellowtail Damsel</h5>
+                <h4 class="card-title text-center">75.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS76mvpWSutDZYu-6_Nwe9gnCnDuf3T7OIJHmVG8v0Eo4jh8kVR" class="card-img-top" >
+              <div class="card-body">
+                <h5 class="card-title text-center">Royal gramma</h5>
+                <h4 class="card-title text-center">200.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://images.reeflifesurvey.com/0/species_a3_58b7f539d60ce.w1000.h666.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Blue devil</h5>
+                <h4 class="card-title text-center">150.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSMtYYh-xw28DYZ2e1BBqSZvzzsI4bSaRNAAdAlPlIUUiHJJ9EW" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Apogonidae</h5>
+                <h4 class="card-title text-center">500.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://seaunseen.com/wp-content/uploads/2014/07/Goldy-Pseudanthias-Squamipinnis.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Sea goldie</h5>
+                <h4 class="card-title text-center">500.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://www.liveaquaria.com/images/categories/large/lg66076BicolorAngelfish.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Bicolor angelfish</h5>
+                <h4 class="card-title text-center">1200.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://www.liveaquaria.com/images/categories/large/lg80467BicolorBlenny.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Bicolor blenny</h5>
+                <h4 class="card-title text-center">2000.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://cdn.mos.cms.futurecdn.net/BgZFhT7piMqXpyzfWrdKyP-1200-80.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Blue tang</h5>
+                <h4 class="card-title text-center">2500.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://aquariumdepot.ca/cdn/shop/files/siganus_vulpinus_147085352_andrey_armyagov.jpg?v=1701028810" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Foxface rabbit</h5>
+                <h4 class="card-title text-center">2000.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://reneeriley.wordpress.com/wp-content/uploads/2017/11/lionfish1-525x420.jpg?w=525" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Lionfish</h5>
+                <h4 class="card-title text-center">600.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://doe.ky/wp-content/uploads/2023/01/Starfish2.png" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Starfish</h5>
+                <h4 class="card-title text-center">250.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="https://fragbox.ca/wp-content/uploads/2019/12/Gold-Coral-Banded-Shrimp.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center">Banded coral shrimp</h5>
+                <h4 class="card-title text-center">150.00rs</h4>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+              </div>
+            </div>
+           </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+           <div class="container box">
+               <div class="row">
+                   <div class="col-lg-6 col-md-6 col-12">
+                    <img src="contact.jpg" class="img-fluid">
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-12">
+                    <h1>CONTACT US</h1>
+                     <form>
+                      <input type="text" class="form-control" placeholder="Enter your name">
+                      <input type="text" class="form-control" placeholder="Enter your email">
+                      <textarea class="form-control" placeholder="Enter your message"></textarea>
+                       <button class="btn-primary">Send message</button>
+                     </form>
+                   </div>
+               </div>
+           </div>
+      </section>
+</body>
+</html>
